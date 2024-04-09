@@ -1,7 +1,8 @@
-import { Button } from "@nextui-org/button"; 
+import { Button } from "@nextui-org/button";
+import { LinkIcon } from "@nextui-org/link";
 import type { Metadata } from "next";
 import Image from "next/image";
-import { Typewriter } from 'nextjs-simple-typewriter';
+import { Typewriter } from "nextjs-simple-typewriter";
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -9,74 +10,212 @@ export const metadata: Metadata = {
 };
 
 const icons = [
-  '/next.svg',
-  '/nodeJS.svg',
-  '/git.svg',
-  '/docker.svg',
-  '/linux.svg',
-  '/agile.svg',
+  "/next.svg",
+  "/nodeJS.svg",
+  "/git.svg",
+  "/docker.svg",
+  "/linux.svg",
+  "/agile.svg",
 ];
 
 export default function Home() {
   return (
-    <> 
-     <div className="my-20">
-      <div className='flex flex-col content-center justify-center text-center space-y-12'>
-        <h1 className="font-bold text-4xl md:text-5xl leading-normal">
-          <span className="bg-gradient-to-r from-yellow-500 to-pink-500 bg-clip-text text-transparent">Next.js</span>
-          &nbsp;and&nbsp;
-          <span className="bg-gradient-to-r from-yellow-500 to-pink-500 bg-clip-text text-transparent">React</span>
-          <br/>
-          <Typewriter
-            words={['Development experts', 'Full-Stack', 'IT Engineering Degree']}
-            loop={50}
-            cursor
-            cursorStyle='_'
-            typeSpeed={70}
-            deleteSpeed={100}
-            delaySpeed={1000}
-            // onLoopDone={handleDone}
-            // onType={handleType}
-          />
-        </h1>
+    <>
+      <div className="my-20">
+        <div className="flex flex-col content-center justify-center text-center space-y-12">
+          <h1 className="font-bold text-4xl md:text-5xl leading-normal">
+            <span className="bg-gradient-to-r from-yellow-500 to-pink-500 bg-clip-text text-transparent">
+              Next.js
+            </span>
+            &nbsp;and&nbsp;
+            <span className="bg-gradient-to-r from-yellow-500 to-pink-500 bg-clip-text text-transparent">
+              React
+            </span>
+            <br />
+            <Typewriter
+              words={[
+                "Development experts",
+                "Full-Stack",
+                "IT Engineering Degree",
+              ]}
+              loop={50}
+              cursor
+              cursorStyle="_"
+              typeSpeed={70}
+              deleteSpeed={100}
+              delaySpeed={1000}
+              // onLoopDone={handleDone}
+              // onType={handleType}
+            />
+          </h1>
 
-        <p className="text-lg md:text-2xl">Crafting digital solutions with innovative architecture<br/>elevating web experiences to new heights.</p>
-       <div className="space-x-4">
-          <Button radius="full" className="bg-gradient-to-tr from-pink-500 to-yellow-500 text-white shadow-lg">
-            Contact Me
-          </Button>
-          <Button color="danger" variant="bordered" radius='full' className="hover:bg-gray-200 hover:text-gray-800 border-fuchsia-200  text-white shadow-lg">
-            My Services
-          </Button>
-       </div>
-      </div>
-     </div>
-     {/* --------------------------------------------------------------------------------------- */}
-     <div className="container mx-auto sm:w-auto lg:w-551 text-center space-y-3">
-      <h2 className='text-lg font-semibold uppercase'>My Skills includes</h2>
-      <div className="grid grid-cols-2 lg:grid-cols-3 gap-4">
-          
-      {icons.map((icon, index) => (
-        <a
-            key={index}
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            className="flex justify-center items-center group rounded-lg border border-transparent border-gray-900 bg-white text-neutral-900 dark:text-neutral-100 dark:bg-neutral-900/30 dark:border-neutral-900 px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-            target="_blank"
-            rel="noopener noreferrer"
+          <p className="text-lg md:text-2xl">
+            Crafting digital solutions with innovative architecture
+            <br />
+            elevating web experiences to new heights.
+          </p>
+          <div className="space-x-4">
+            <Button
+              radius="full"
+              className="bg-gradient-to-tr from-pink-500 to-yellow-500 text-white shadow-lg"
             >
-             <Image
-              src={icon}
+              Contact Me
+            </Button>
+            <Button
+              color="danger"
+              variant="bordered"
+              radius="full"
+              className="hover:bg-gray-200 hover:text-gray-800 border-fuchsia-200  text-white shadow-lg"
+            >
+              My Services
+            </Button>
+          </div>
+        </div>
+      </div>
+      {/* --------------------------------------------------------------------------------------- */}
+      <section className="mx-auto sm:w-auto lg:w-551 text-center space-y-3">
+        <h2 className="text-lg font-semibold uppercase">
+          Proficiency Spectrum
+        </h2>
+        <div className="grid grid-cols-2 lg:grid-cols-3 gap-4">
+          {icons.map((icon, index) => (
+            <a
+              key={index}
+              href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
+              className="flex justify-center items-center group rounded-lg border border-transparent border-gray-900 bg-white text-neutral-900 dark:text-neutral-100 dark:bg-neutral-900/30 dark:border-neutral-900 px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <Image
+                src={icon}
+                alt="Vercel Logo"
+                className="dark:invert"
+                width={100}
+                height={24}
+                priority
+              />
+            </a>
+          ))}
+        </div>
+      </section>
+      {/* --------------------------------------------------------------------------------------- */}
+      <section className="grid lg:grid-cols-2 gap-4 my-40">
+        <div className="space-y-3 flex flex-col justify-center">
+          <h2 className="font-bold text-4xl md:text-4xl leading-normal">
+            Together Towards
+            <br />
+            <span className="bg-gradient-to-r from-yellow-500 to-pink-500 bg-clip-text text-transparent">
+              Lasting Success
+            </span>
+          </h2>
+          <p className="text-justify">
+            As an IT Engineer specializing in Full Stack and Web Design, I focus
+            on IT services for organizations and Software solutions. My
+            interests include web/mobile design, multimedia, and digital
+            marketing strategies like SEO and SMO.
+          </p>
+        </div>
+        <div className="">
+          <iframe
+            className="w-full h-unit-6xl rounded-2xl"
+            src="https://www.youtube.com/embed/t_5GQyVWB1E?si=-5I6MC7T2EPIV9jV"
+            title="YouTube video player"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            referrerPolicy="strict-origin-when-cross-origin"
+            allowFullScreen
+          ></iframe>
+        </div>
+      </section>
+      {/* --------------------------------------------------------------------------------------- */}
+      <section className="flex flex-col text-center gap-4 my-40">
+        <div className="space-y-3 flex flex-col justify-center">
+          <h2 className="font-bold text-4xl md:text-4xl leading-normal">
+            Key Tools for&nbsp;
+            <span className="bg-gradient-to-r from-yellow-500 to-pink-500 bg-clip-text text-transparent">
+              Success
+            </span>
+          </h2>
+          <p>
+            Discover the essential tools and technologies that empower my
+            <br />
+            success in delivering impactful solutions globally.
+          </p>
+        </div>
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 py-10">
+          <div className="flex flex-col items-center space-y-2 gap-2">
+            <Image
+              src="/vercel.svg"
               alt="Vercel Logo"
-              className="dark:invert"
               width={100}
-              height={24}
+              height={100}
+              className="dark:invert"
               priority
             />
-        </a>
-      ))}
-    
-      </div>
-    </div>
+            <p className="text-neutral-200">Vercel</p>
+            <a
+              href="#outside"
+              className="flex justify-center items-center group rounded-lg border border-transparent border-gray-900 bg-white text-neutral-900 dark:text-neutral-100 dark:bg-neutral-500/30 dark:border-neutral-900 px-5 py-2 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
+            >
+              <LinkIcon />
+              <p className="text-sm">Visit Website</p>
+            </a>
+          </div>
+          <div className="flex flex-col items-center space-y-2 gap-2">
+            <Image
+              src="/vercel.svg"
+              alt="Vercel Logo"
+              width={100}
+              height={100}
+              className="dark:invert"
+              priority
+            />
+            <p className="text-neutral-200">Vercel</p>
+            <a
+              href="#outside"
+              className="flex justify-center items-center group rounded-lg border border-transparent border-gray-900 bg-white text-neutral-900 dark:text-neutral-100 dark:bg-neutral-500/30 dark:border-neutral-900 px-5 py-2 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
+            >
+              <LinkIcon />
+              <p className="text-sm">Visit Website</p>
+            </a>
+          </div>
+          <div className="flex flex-col items-center space-y-2 gap-2">
+            <Image
+              src="/vercel.svg"
+              alt="Vercel Logo"
+              width={100}
+              height={100}
+              className="dark:invert"
+              priority
+            />
+            <p className="text-neutral-200">Vercel</p>
+            <a
+              href="#outside"
+              className="flex justify-center items-center group rounded-lg border border-transparent border-gray-900 bg-white text-neutral-900 dark:text-neutral-100 dark:bg-neutral-500/30 dark:border-neutral-900 px-5 py-2 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
+            >
+              <LinkIcon />
+              <p className="text-sm">Visit Website</p>
+            </a>
+          </div>
+          <div className="flex flex-col items-center space-y-2 gap-2">
+            <Image
+              src="/vercel.svg"
+              alt="Vercel Logo"
+              width={100}
+              height={100}
+              className="dark:invert"
+              priority
+            />
+            <p className="text-neutral-200">Vercel</p>
+            <a
+              href="#outside"
+              className="flex justify-center items-center group rounded-lg border border-transparent border-gray-900 bg-white text-neutral-900 dark:text-neutral-100 dark:bg-neutral-500/30 dark:border-neutral-900 px-5 py-2 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
+            >
+              <LinkIcon />
+              <p className="text-sm">Visit Website</p>
+            </a>
+          </div>
+        </div>
+      </section>
     </>
   );
 }
