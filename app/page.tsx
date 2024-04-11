@@ -3,6 +3,8 @@ import { LinkIcon } from "@nextui-org/link";
 import type { Metadata } from "next";
 import Image from "next/image";
 import { Typewriter } from "nextjs-simple-typewriter";
+import { FeatureCard } from "./_components";
+import { Input } from "@nextui-org/input";
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -127,7 +129,7 @@ export default function Home() {
         </div>
       </section>
       {/* --------------------------------------------------------------------------------------- */}
-      <section className="flex flex-col text-center gap-4 my-40">
+      <section className="flex flex-col text-center gap-4 my-40 px-5 pb-10 pt-20  xl:border bg-neutral-900 xl:border-neutral-700 rounded-2xl">
         <div className="space-y-3 flex flex-col justify-center">
           <h2 className="font-bold text-4xl md:text-4xl leading-normal">
             Key Tools for&nbsp;
@@ -214,6 +216,50 @@ export default function Home() {
               <p className="text-sm">Visit Website</p>
             </a>
           </div>
+        </div>
+      </section>
+      {/* --------------------------------------------------------------------------------------- */}
+      <section className="flex flex-col text-center gap-4 my-40 px-5 pb-10 pt-20">
+        <div className="space-y-3 flex flex-col justify-center">
+          <h2 className="font-bold text-4xl md:text-4xl leading-normal">
+            Why work with me
+          </h2>
+          <p>
+            Discover the essential tools and technologies that empower my
+            <br />
+            success in delivering impactful solutions globally.
+          </p>
+        </div>
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 py-10 gap-3">
+          <FeatureCard />
+          <FeatureCard />
+          <FeatureCard />
+          <FeatureCard />
+        </div>
+      </section>
+      {/* --------------------------------------------------------------------------------------- */}
+      <section className="flex flex-col gap-4 my-40 px-5 pb-10 pt-20  xl:border bg-neutral-900 xl:border-neutral-700 rounded-2xl">
+        <div className="space-y-3 flex flex-col justify-center  text-center">
+          <h2 className="font-bold text-4xl md:text-4xl leading-normal">
+            Get in touch
+          </h2>
+          <p>
+            Feel free to reach out if you have any exciting ideas or projects
+            you&apos;d like to bring to life! <br />
+            Don&apos;t hesitate to share your vision—I&apos;m here to help turn
+            it into reality.
+          </p>
+        </div>
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 py-10 gap-3">
+          <Input
+            type="email"
+            label="Email"
+            variant="bordered"
+            defaultValue="junior2nextui.org"
+            isInvalid={true}
+            errorMessage="Please enter a valid email"
+            className="max-w-xs"
+          />
         </div>
       </section>
     </>
