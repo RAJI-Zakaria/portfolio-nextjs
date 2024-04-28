@@ -5,3 +5,5 @@ export { default as Logo } from "./common/Logo";
 export { default as StarField } from "./common/StarField";
 export { default as TypeWriter } from "./common/TypeWriter";
 export { default as FeatureCard } from "./common/FeatureCard";
+export { default as Contact } from "./common/Contact";
+export { default as EmailTemplate } from "./common/EmailTemplate";
