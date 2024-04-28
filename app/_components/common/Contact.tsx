@@ -5,8 +5,8 @@ import { Input, Textarea } from "@nextui-org/input";
 
 const Contact = () => {
   const [emailInvalid, setEmailInvalid] = useState(false);
-  const [email, setEmail] = useState("");
-  const [message, setMessage] = useState("");
+  const [email, setEmail] = useState("zakariaraji.me@gmail.com");
+  const [message, setMessage] = useState("hello there howdy");
   const [successMessage, setSuccessMessage] = useState("");
   const [errorMessage, setErrorMessage] = useState("");
 

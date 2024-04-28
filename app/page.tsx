@@ -4,7 +4,7 @@ import { LinkIcon } from "@nextui-org/link";
 import type { Metadata } from "next";
 import Image from "next/image";
 import { Typewriter } from "nextjs-simple-typewriter";
-import { Contact, FeatureCard } from "./_components";
+import { Certification, Contact, FeatureCard } from "./_components";
 
 import { Textarea } from "@nextui-org/react";
 
@@ -127,95 +127,7 @@ export default function Home() {
         </div>
       </section>
       {/* --------------------------------------------------------------------------------------- */}
-      <section className="flex flex-col text-center gap-4 my-40 px-5 pb-10 pt-20  xl:border bg-neutral-900 xl:border-neutral-700 rounded-2xl">
-        <div className="space-y-3 flex flex-col justify-center">
-          <h2 className="font-bold text-4xl md:text-4xl leading-normal">
-            Key Tools for&nbsp;
-            <span className="bg-gradient-to-r from-yellow-500 to-pink-500 bg-clip-text text-transparent">
-              Success
-            </span>
-          </h2>
-          <p>
-            Discover the essential tools and technologies that empower my
-            <br />
-            success in delivering impactful solutions globally.
-          </p>
-        </div>
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 py-10">
-          <div className="flex flex-col items-center space-y-2 gap-2">
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              width={100}
-              height={100}
-              className="dark:invert"
-              priority
-            />
-            <p className="text-neutral-200">Vercel</p>
-            <a
-              href="#outside"
-              className="flex justify-center items-center group rounded-lg border border-transparent border-gray-900 bg-white text-neutral-900 dark:text-neutral-100 dark:bg-neutral-500/30 dark:border-neutral-900 px-5 py-2 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-            >
-              <LinkIcon />
-              <p className="text-sm">Visit Website</p>
-            </a>
-          </div>
-          <div className="flex flex-col items-center space-y-2 gap-2">
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              width={100}
-              height={100}
-              className="dark:invert"
-              priority
-            />
-            <p className="text-neutral-200">Vercel</p>
-            <a
-              href="#outside"
-              className="flex justify-center items-center group rounded-lg border border-transparent border-gray-900 bg-white text-neutral-900 dark:text-neutral-100 dark:bg-neutral-500/30 dark:border-neutral-900 px-5 py-2 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-            >
-              <LinkIcon />
-              <p className="text-sm">Visit Website</p>
-            </a>
-          </div>
-          <div className="flex flex-col items-center space-y-2 gap-2">
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              width={100}
-              height={100}
-              className="dark:invert"
-              priority
-            />
-            <p className="text-neutral-200">Vercel</p>
-            <a
-              href="#outside"
-              className="flex justify-center items-center group rounded-lg border border-transparent border-gray-900 bg-white text-neutral-900 dark:text-neutral-100 dark:bg-neutral-500/30 dark:border-neutral-900 px-5 py-2 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-            >
-              <LinkIcon />
-              <p className="text-sm">Visit Website</p>
-            </a>
-          </div>
-          <div className="flex flex-col items-center space-y-2 gap-2">
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              width={100}
-              height={100}
-              className="dark:invert"
-              priority
-            />
-            <p className="text-neutral-200">Vercel</p>
-            <a
-              href="#outside"
-              className="flex justify-center items-center group rounded-lg border border-transparent border-gray-900 bg-white text-neutral-900 dark:text-neutral-100 dark:bg-neutral-500/30 dark:border-neutral-900 px-5 py-2 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-            >
-              <LinkIcon />
-              <p className="text-sm">Visit Website</p>
-            </a>
-          </div>
-        </div>
-      </section>
+      <Certification />
       {/* --------------------------------------------------------------------------------------- */}
       <section className="flex flex-col text-center gap-4 my-40 px-5 pb-10 pt-20">
         <div className="space-y-3 flex flex-col justify-center">
