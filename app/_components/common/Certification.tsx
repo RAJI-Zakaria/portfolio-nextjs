@@ -37,7 +37,7 @@ const Certification = () => {
     <section className="flex flex-col text-center gap-4 my-40 px-5 pb-10 pt-20  xl:border bg-neutral-900 xl:border-neutral-700 rounded-2xl">
       <div className="space-y-3 flex flex-col justify-center">
         <h2 className="font-bold text-4xl md:text-4xl leading-normal">
-          Certified &nbsp;
+          Certified&nbsp;
           <span className="bg-gradient-to-r from-yellow-500 to-pink-500 bg-clip-text text-transparent">
             Proficiency
           </span>
@@ -77,8 +77,7 @@ const Certification = () => {
           </div>
         ))}
       </div>
-
-      <Modal isOpen={isOpen} onOpenChange={onOpenChange}>
+      <Modal size="3xl" isOpen={isOpen} onOpenChange={onOpenChange}>
         <ModalContent>
           {(onClose) => (
             <>
@@ -87,6 +86,12 @@ const Certification = () => {
               </ModalHeader>
               <ModalBody>
                 <p>{certifications[selectedItem].description}</p>
+                <iframe
+                  title={certifications[selectedItem].title}
+                  src={certifications[selectedItem].url}
+                  className="w-full rounded-2xl"
+                  height="500px"
+                ></iframe>
               </ModalBody>
               <ModalFooter>
                 <Button color="danger" variant="light" onPress={onClose}>

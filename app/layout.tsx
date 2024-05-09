@@ -41,11 +41,11 @@ export default function RootLayout({
             <footer className="w-full flex items-center justify-center py-3">
               <Link
                 className="flex items-center gap-1 text-current"
-                href="https://nextui-docs-v2.vercel.app?utm_source=next-app-template"
+                href="http://zzk.fr"
                 title="nextui.org homepage"
               >
-                <span className="text-default-600">Powered by</span>
-                <p className="text-primary">NextUI</p>
+                <span className="text-default-600">Brought to you by</span>
+                <p className="text-primary">Zakaria RAJI - ZKR - ZZK</p>
               </Link>
             </footer>
           </div>
