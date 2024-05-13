@@ -11,7 +11,7 @@ const CalculatorPage = () => {
         <div className="space-y-4 mb-5">
           <p>
             The idea was really simple. I set up buttons with an onClick action,
-            handleButtonClick("1").
+            handleButtonClick(&quot;1&quot;).
             <br />
             This function concatenates the new parameter value (the button
             value)
@@ -19,8 +19,8 @@ const CalculatorPage = () => {
             to the currently inserted expression.
           </p>
           <p>
-            If the clicked button is '=', then I use the eval function to parse
-            and calculate the expression.
+            If the clicked button is &apos;=&apos;, then I use the eval function
+            to parse and calculate the expression.
             <br />
             Easy peasy lemon squeezy!
           </p>
