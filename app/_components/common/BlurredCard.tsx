@@ -22,7 +22,7 @@ export default function BlurredCard({
     <Card
       isFooterBlurred
       radius="lg"
-      className=" flex-shrink-0 border-none h-60 w-60  m-3 hover:scale-105 transition-transform duration-300 ease-in-out"
+      className=" flex-shrink-0 border-none h-60 w-60 mx-auto my-3  md:m-3 hover:scale-105 transition-transform duration-300 ease-in-out"
     >
       <Image
         alt="Woman listing to music"

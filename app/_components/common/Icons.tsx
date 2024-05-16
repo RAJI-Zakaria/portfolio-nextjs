@@ -232,6 +232,55 @@ const LinkIcon: React.FC<IconSvgProps> = (props) => {
   );
 };
 
+const HeartIcon = ({
+  size = 24,
+  width,
+  height,
+  strokeWidth = 1.5,
+  fill = "none",
+  className = "",
+  ...props
+}: {
+  size?: number;
+  width?: number;
+  height?: number;
+  strokeWidth?: number;
+  fill?: string;
+  className?: string;
+}) => (
+  <svg
+    aria-hidden="true"
+    fill={fill}
+    focusable="false"
+    height={size || height}
+    role="presentation"
+    viewBox="0 0 24 24"
+    width={size || width}
+    className={className}
+    {...props}
+  >
+    <path
+      d="M12.62 20.81C12.28 20.93 11.72 20.93 11.38 20.81C8.48 19.82 2 15.69 2 8.68998C2 5.59998 4.49 3.09998 7.56 3.09998C9.38 3.09998 10.99 3.97998 12 5.33998C13.01 3.97998 14.63 3.09998 16.44 3.09998C19.51 3.09998 22 5.59998 22 8.68998C22 15.69 15.52 19.82 12.62 20.81Z"
+      stroke="currentColor"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      strokeWidth={strokeWidth}
+    />
+  </svg>
+);
+
+const QuoteIcon = ({ className = "", ...props }: IconSvgProps) => (
+  <svg
+    className={`w-10 h-10 mx-auto mb-3 text-gray-700 dark:text-gray-200 ${className}`}
+    aria-hidden="true"
+    xmlns="http://www.w3.org/2000/svg"
+    fill="currentColor"
+    viewBox="0 0 18 14"
+  >
+    <path d="M6 0H2a2 2 0 0 0-2 2v4a2 2 0 0 0 2 2h4v1a3 3 0 0 1-3 3H2a1 1 0 0 0 0 2h1a5.006 5.006 0 0 0 5-5V2a2 2 0 0 0-2-2Zm10 0h-4a2 2 0 0 0-2 2v4a2 2 0 0 0 2 2h4v1a3 3 0 0 1-3 3h-1a1 1 0 0 0 0 2h1a5.006 5.006 0 0 0 5-5V2a2 2 0 0 0-2-2Z" />
+  </svg>
+);
+
 const Icons = {
   Logo,
   DiscordIcon,
@@ -243,6 +292,8 @@ const Icons = {
   SearchIcon,
   NextUILogo,
   LinkIcon,
+  HeartIcon,
+  QuoteIcon,
 };
 
 export default Icons;

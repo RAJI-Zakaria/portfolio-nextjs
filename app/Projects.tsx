@@ -48,9 +48,19 @@ const Projects = () => {
       githubLink: "",
       isPopover: false,
     },
+    {
+      title: "Quotes",
+      link: "/quotes",
+      imagePath: "/thumbnails/thumbnail-quotes.png",
+      githubLink: "",
+      isPopover: false,
+    },
   ];
   return (
-    <section className="flex flex-col text-center gap-4 my-40 px-5 pb-10 pt-20">
+    <section
+      id="projects"
+      className="flex flex-col text-center gap-4 my-40 px-5 pb-10 pt-20"
+    >
       <div className="space-y-3 flex flex-col justify-center">
         <h2 className="font-bold text-4xl md:text-4xl leading-normal">
           Why work with me
@@ -61,7 +71,7 @@ const Projects = () => {
           solutions.
         </p>
       </div>
-      <div className="flex flex-col md:flex-row w-fit m-auto ">
+      <div className="flex flex-wrap flex-col md:flex-row justify-center ">
         {projects.map((project, index) => (
           <BlurredCard
             key={index}

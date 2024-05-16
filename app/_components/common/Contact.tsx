@@ -5,13 +5,13 @@ import { Input, Textarea } from "@nextui-org/input";
 
 const Contact = () => {
   const [emailInvalid, setEmailInvalid] = useState(false);
-  const [email, setEmail] = useState("zakariaraji.me@gmail.com");
-  const [message, setMessage] = useState("hello there howdy");
+  const [email, setEmail] = useState("");
+  const [message, setMessage] = useState("");
   const [successMessage, setSuccessMessage] = useState("");
   const [errorMessage, setErrorMessage] = useState("");
 
   useEffect(() => {
-    setEmailInvalid(!validateEmail(email));
+    if (email.length > 0) setEmailInvalid(!validateEmail(email));
   }, [email]);
 
   const validateEmail = (email: string) => {
@@ -58,7 +58,10 @@ const Contact = () => {
   }
 
   return (
-    <section className="flex flex-col gap-4 my-40 px-5 pb-10 pt-20  xl:border bg-neutral-900 xl:border-neutral-700 rounded-2xl">
+    <section
+      id="contact"
+      className="flex flex-col gap-4 my-40 px-5 pb-10 pt-20  xl:border bg-neutral-900 xl:border-neutral-700 rounded-2xl"
+    >
       <div className="space-y-3 flex flex-col justify-center  text-center">
         <h2 className="font-bold text-4xl md:text-4xl leading-normal">
           Get in touch
@@ -70,10 +73,18 @@ const Contact = () => {
           into reality.
         </p>
       </div>
+
       <form
         onSubmit={handleSubmit}
         className="flex flex-col space-y-3 m-auto mt-8 mb-2 w-80 max-w-screen-lg sm:w-96"
       >
+        {" "}
+        {successMessage && (
+          <div className="text-green-500 text-center">{successMessage}</div>
+        )}
+        {errorMessage && (
+          <div className="text-red-500 text-center">{errorMessage}</div>
+        )}
         <Input
           type="email"
           variant="bordered"
@@ -106,12 +117,6 @@ const Contact = () => {
           Send
         </Button>
       </form>
-      {successMessage && (
-        <div className="text-green-500 text-center">{successMessage}</div>
-      )}
-      {errorMessage && (
-        <div className="text-red-500 text-center">{errorMessage}</div>
-      )}
     </section>
   );
 };

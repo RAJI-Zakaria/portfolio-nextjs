@@ -1,4 +1,5 @@
 import { Button } from "@nextui-org/button";
+import Link from "next/link";
 import { Typewriter } from "nextjs-simple-typewriter";
 import React from "react";
 
@@ -34,20 +35,20 @@ const HeroSection = () => {
           elevating web experiences to new heights.
         </p>
         <div className="space-x-4">
-          <Button
-            radius="full"
-            className="bg-gradient-to-tr from-pink-500 to-yellow-500 text-white shadow-lg"
+          <Link
+            href="#contact"
+            className="z-0 group relative inline-flex items-center justify-center box-border appearance-none select-none whitespace-nowrap font-normal subpixel-antialiased overflow-hidden tap-highlight-transparent outline-none data-[focus-visible=true]:z-10 data-[focus-visible=true]:outline-2 data-[focus-visible=true]:outline-focus data-[focus-visible=true]:outline-offset-2 px-unit-4 min-w-unit-20 h-unit-10 text-small gap-unit-2 rounded-full [&>svg]:max-w-[theme(spacing.unit-8)] data-[pressed=true]:scale-[0.97] transition-transform-colors-opacity motion-reduce:transition-none bg-default data-[hover=true]:opacity-hover bg-gradient-to-tr from-pink-500 to-yellow-500 text-white shadow-lg"
           >
             Contact Me
-          </Button>
-          <Button
+          </Link>
+          <Link
             color="danger"
-            variant="bordered"
-            radius="full"
-            className="hover:bg-gray-200 hover:text-gray-800 border-fuchsia-200  text-white shadow-lg"
+            href="#projects"
+            className="z-0 group relative inline-flex items-center justify-center box-border appearance-none select-none whitespace-nowrap font-normal subpixel-antialiased overflow-hidden tap-highlight-transparent outline-none data-[focus-visible=true]:z-10 data-[focus-visible=true]:outline-2 data-[focus-visible=true]:outline-focus data-[focus-visible=true]:outline-offset-2 border-medium px-unit-4 min-w-unit-20 h-unit-10 text-small gap-unit-2 rounded-full [&>svg]:max-w-[theme(spacing.unit-8)] data-[pressed=true]:scale-[0.97] transition-transform-colors-opacity motion-reduce:transition-none bg-transparent data-[hover=true]:opacity-hover hover:bg-gray-200 hover:text-gray-800 border-fuchsia-200 text-white shadow-lg"
+            //add onclick go to #projects
           >
-            My Services
-          </Button>
+            My Projects
+          </Link>
         </div>
       </div>
     </div>

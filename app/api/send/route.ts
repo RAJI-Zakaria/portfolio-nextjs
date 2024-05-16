@@ -11,6 +11,8 @@ export async function POST(req: NextRequest) {
     // show all req body
     const { email, message } = await req.json();
 
+    const receivers = ["zakariaraji.me@gmail.com"];
+
     //check before send email
 
     if (!email || !message) {
@@ -18,8 +20,8 @@ export async function POST(req: NextRequest) {
     }
 
     const { data, error } = await resend.emails.send({
-      from: "Zakaria <zakariaraji.me@gmail.com>",
-      to: [email],
+      from: email,
+      to: "X <" + email + ">",
       subject: "Reaching out from Contact Form",
       react: EmailTemplate({ email, message }) as React.ReactElement,
     });
@@ -27,9 +29,10 @@ export async function POST(req: NextRequest) {
     if (error) {
       return Response.json({ error });
     }
-
+    console.log("Email sent successfully!", data);
     return Response.json({ data });
   } catch (error) {
+    console.log("Error sending email", error);
     return Response.json({ error });
   }
 }

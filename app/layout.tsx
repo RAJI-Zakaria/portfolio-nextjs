@@ -42,10 +42,10 @@ export default function RootLayout({
               <Link
                 className="flex items-center gap-1 text-current"
                 href="http://zzk.fr"
-                title="nextui.org homepage"
+                title="zzk.fr homepage - Zakaria RAJI"
               >
-                <span className="text-default-600">Brought to you by</span>
-                <p className="text-primary">Zakaria RAJI - ZKR - ZZK</p>
+                <span className="text-neutral-100">Brought to you by</span>
+                <p className="text-neutral-300">Zakaria RAJI - ZKR - ZZK</p>
               </Link>
             </footer>
           </div>
