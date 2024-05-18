@@ -45,7 +45,7 @@ const NavBar = () => {
   );
 
   return (
-    <NextUINavbar maxWidth="xl" position="sticky">
+    <NextUINavbar maxWidth="xl" className="fixed">
       <NavbarContent className="basis-1/5 sm:basis-full" justify="start">
         <NavbarBrand as="li" className="gap-3 max-w-fit">
           <NextLink className="flex justify-start items-center gap-1" href="/">
@@ -123,7 +123,7 @@ const NavBar = () => {
                     ? "danger"
                     : "foreground"
                 }
-                href="#"
+                href={`${item.href}`}
                 size="lg"
               >
                 {item.label}
