@@ -10,6 +10,8 @@ import { Metadata } from "next";
 import Link from "next/link";
 import { NavBar, StarField } from "./_components";
 
+import { Toaster } from "react-hot-toast";
+
 export const metadata: Metadata = {
   title: {
     default: siteConfig.name,
@@ -32,6 +34,16 @@ export default function RootLayout({
     <html className="dark" lang="en" style={{ colorScheme: "dark" }}>
       <body className={inter.className}>
         <ThemeProvider>
+          <Toaster
+            position="bottom-right"
+            toastOptions={{
+              style: {
+                background: "#333",
+                color: "#fff",
+              },
+            }}
+          />
+
           <StarField />
           <div className="relative flex flex-col h-screen  dark text-foreground bg-background">
             <NavBar />
