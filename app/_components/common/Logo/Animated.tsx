@@ -1,9 +1,6 @@
-// "use client";
-import React, { useState } from "react";
 import "./logo.style.css";
 
-const LogoAnimation = () => {
-  // const [isBoucing, setIsBoucing] = useState(false);
+const LogoAnimation = ({ className }: { className?: string }) => {
   return (
     <svg
       id="Layer_2"
@@ -11,14 +8,7 @@ const LogoAnimation = () => {
       xmlns="http://www.w3.org/2000/svg"
       viewBox="0 0 114.73 130.32"
       fill="#fff"
-      className={"w-10"}
-      // + (isBoucing ? "gelatine" : "")
-      // onClick={() => {
-      //   setIsBoucing(true);
-      //   setTimeout(() => {
-      //     setIsBoucing(false);
-      //   }, 500);
-      // }}
+      className={"w-10 " + className}
     >
       <g id="Layer_1-2" data-name="Layer 1">
         <g>
