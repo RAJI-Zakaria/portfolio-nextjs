@@ -8,6 +8,7 @@ const ColorGuesser = () => {
   // const [selectedColor, setSelectedColor] = useState();
   const [cardColor, setCardColor] = useState<string>();
   const [colors, setColors] = useState<string[]>([]);
+  const [isRegenerating, setIsRegenerating] = useState<boolean>(false);
 
   const generateColors = () => {
     // Create a new array with random colors
@@ -26,17 +27,30 @@ const ColorGuesser = () => {
     setCardColor(selectedHexColor);
   };
 
+  const verifyColor = (color: string) => {
+    if (color === cardColor) {
+      setIsRegenerating(true);
+      // setSelectedColor(color);
+      toast.success("Huraayyyy! Correct color!!!");
+      setTimeout(() => {
+        setIsRegenerating(false);
+        generateColors();
+      }, 3000);
+    } else {
+      toast.error("Wrong color try again!!!");
+    }
+  };
+
   useEffect(() => {
     generateColors();
   }, []);
 
   return (
     <>
-      <ColorCard fill={cardColor} />
+      <ColorCard fill={cardColor} isRegenerating={isRegenerating} />
       <ColorActions
         colors={colors}
-        correctColor={cardColor}
-        // setSelectedColor={setSelectedColor}
+        verifyColor={verifyColor}
         generateColors={generateColors}
       />
     </>

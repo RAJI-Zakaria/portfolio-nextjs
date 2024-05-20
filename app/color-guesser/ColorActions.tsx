@@ -4,14 +4,12 @@ import { Button } from "@nextui-org/button";
 import toast from "react-hot-toast";
 
 const ColorActions = ({
-  correctColor,
   colors,
-  //   setSelectedColor,
+  verifyColor,
   generateColors,
 }: {
-  correctColor?: string;
   colors: string[];
-  //   setSelectedColor: any;
+  verifyColor: (color: string) => void;
   generateColors: () => void;
 }) => {
   return (
@@ -21,16 +19,9 @@ const ColorActions = ({
           <Button
             key={color}
             variant="flat"
-            className="w-16 h-16 rounded-full"
+            className="h-10 rounded-full hover:bg-neutral-500"
             //   style={{ backgroundColor: color }}
-            onClick={() => {
-              if (color === correctColor) {
-                // setSelectedColor(color);
-                toast.success("Huraayyyy! Correct color!!!");
-              } else {
-                toast.error("Wrong color try again!!!");
-              }
-            }}
+            onClick={() => verifyColor(color)}
           >
             {color}
           </Button>
