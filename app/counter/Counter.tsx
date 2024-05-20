@@ -1,3 +1,4 @@
+"use client";
 import React from "react";
 import { useCounterStore } from "./store";
 import { Button } from "@nextui-org/react";
