@@ -48,9 +48,10 @@ export const siteConfig = {
     },
   ],
   links: {
-    github: "https://github.com",
+    github: "https://github.com/RAJI-Zakaria/",
     twitter: "https://twitter.com",
     docs: "https://nextui.org",
     discord: "https://discord.gg",
+    linkedIn: "https://www.linkedin.com/in/zakariaraji/",
   },
 };

@@ -1,28 +1,33 @@
-import {
-  Navbar as NextUINavbar,
-  NavbarContent,
-  NavbarMenu,
-  NavbarMenuToggle,
-  NavbarBrand,
-  NavbarItem,
-  NavbarMenuItem,
-} from "@nextui-org/navbar";
-import { Button } from "@nextui-org/button";
+import { Input } from "@nextui-org/input";
 import { Kbd } from "@nextui-org/kbd";
 import { Link } from "@nextui-org/link";
-import { Input } from "@nextui-org/input";
+import {
+  NavbarBrand,
+  NavbarContent,
+  NavbarItem,
+  NavbarMenu,
+  NavbarMenuItem,
+  NavbarMenuToggle,
+  Navbar as NextUINavbar,
+} from "@nextui-org/navbar";
 
 import { link as linkStyles } from "@nextui-org/theme";
 
 import { siteConfig } from "@/config/site";
-import NextLink from "next/link";
 import clsx from "clsx";
+import NextLink from "next/link";
 
-import { AnimatedLogo, Icons, Logo, ThemeSwitch } from "@/app/_components";
+import { AnimatedLogo, Icons } from "@/app/_components";
 
 const NavBar = () => {
-  const { SearchIcon, HeartFilledIcon, TwitterIcon, DiscordIcon, GithubIcon } =
-    Icons;
+  const {
+    SearchIcon,
+    HeartFilledIcon,
+    TwitterIcon,
+    DiscordIcon,
+    GithubIcon,
+    LinkedInIcon,
+  } = Icons;
   const searchInput = (
     <Input
       aria-label="Search"
@@ -77,13 +82,18 @@ const NavBar = () => {
         justify="end"
       >
         <NavbarItem className="hidden sm:flex gap-2">
-          <Link href={siteConfig.links.twitter} aria-label="Twitter">
-            <TwitterIcon className="text-default-500" />
+          <Link
+            target="_blank"
+            href={siteConfig.links.linkedIn}
+            aria-label="LinkedIn"
+          >
+            <LinkedInIcon className="text-default-500" />
           </Link>
-          <Link href={siteConfig.links.discord} aria-label="Discord">
-            <DiscordIcon className="text-default-500" />
-          </Link>
-          <Link href={siteConfig.links.github} aria-label="Github">
+          <Link
+            target="_blank"
+            href={siteConfig.links.github}
+            aria-label="Github"
+          >
             <GithubIcon className="text-default-500" />
           </Link>
           {/* <ThemeSwitch /> */}
