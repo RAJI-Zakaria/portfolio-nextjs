@@ -5,7 +5,8 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "start": "next start",
+    "build:prod": "env-cmd -f .env.production next build",
+    "start": "PORT=4020 next start",
     "lint": "next lint"
   },
   "dependencies": {
@@ -26,6 +27,7 @@
     "axios": "^1.6.8",
     "classnames": "^2.5.1",
     "clsx": "^2.1.0",
+    "env-cmd": "^10.1.0",
     "framer-motion": "^11.0.25",
     "fs": "^0.0.1-security",
     "next": "14.1.4",

@@ -34,12 +34,22 @@ const Projects = () => {
       isPopover: true,
     },
     {
-      title: "More Projects",
-      link: "https://github.com/RAJI-Zakaria",
-      isLinkBlank: true,
-      imagePath: "/thumbnails/thumbnail-more.png",
-      isPopover: false,
+      title: "GuitART - Customize your Guitar",
+      description: `<h3>Introduction :</h3>
+
+      <ul style="list-style-type: circle; margin-left:20px;text-align:justify;">
+        <li>First of all, I would like to express my heartfelt gratitude to my professor, Mr. J. Vinola, who is not only a skilled system embedded engineer but also a talented guitarist.</li>
+        <li>He presented a comprehensive full-stack project for the class, utilizing robust technologies such as .NET C#, MySQL, PHP, and DHTML.</li>
+        <li>Here is a video showcasing what we have accomplished.</li>
+      </ul>
+      <br />
+      <h2>The video is in Spanish: (It brings a unique flavor to speak Spanish even as a beginner).</h2>
+      <br />
+      <iframe style="width:100%; min-height:350px; border-radius:24px"  src="https://www.youtube.com/embed/VV1uIWdDaDA" title="Guitart - School Project desktop app Team Work - Voice Off - i don&#39;t speak Spanish - But i love it." frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>`,
       githubLink: "",
+      imagePath: "/thumbnails/thumbnail-guitart.png",
+      link: "/project1",
+      isPopover: true,
     },
     {
       title: "Calculator",
@@ -55,7 +65,38 @@ const Projects = () => {
       githubLink: "",
       isPopover: false,
     },
+    {
+      title: "Logo",
+      link: "/logo",
+      imagePath: "/thumbnails/thumbnail-logo.png",
+      githubLink: "",
+      isPopover: false,
+    },
+    {
+      title: "Counter",
+      link: "/counter",
+      imagePath: "/thumbnails/thumbnail-counter.png",
+      githubLink: "",
+      isPopover: false,
+    },
+    {
+      title: "Color Guesser",
+      link: "/color-guesser",
+      imagePath: "/thumbnails/thumbnail-color-guesser.png",
+      githubLink: "",
+      isPopover: false,
+    },
+    {
+      title: "More Projects",
+      link: "https://github.com/RAJI-Zakaria",
+      isLinkBlank: true,
+      imagePath: "/thumbnails/thumbnail-more.png",
+      isPopover: false,
+      githubLink: "",
+    },
   ];
+
+  //
   return (
     <section
       id="projects"

@@ -40,7 +40,7 @@ const ColorCard = ({ fill = "white", isRegenerating = false }: PropsType) => {
             hidden ? "text-white" : "text-black"
           )}
         >
-          {hidden ? "Give Hint!" : "Hide"}
+          {hidden ? "Peek-a-Boo, Hue!" : "Hide"}
         </Button>
       ) : (
         <span

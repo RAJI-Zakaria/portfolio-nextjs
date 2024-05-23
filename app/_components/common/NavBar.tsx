@@ -116,6 +116,9 @@ const NavBar = () => {
         <Link href={siteConfig.links.github} aria-label="Github">
           <GithubIcon className="text-default-500" />
         </Link>
+        <Link href={siteConfig.links.linkedIn} aria-label="LinkedIn">
+          <LinkedInIcon className="text-default-500" />
+        </Link>
         {/* <ThemeSwitch /> */}
         <NavbarMenuToggle />
       </NavbarContent>

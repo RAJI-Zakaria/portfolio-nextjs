@@ -14,11 +14,11 @@ const ProficiencySpectrum = () => {
       <h2 className="text-lg font-semibold uppercase">Proficiency Spectrum</h2>
       <div className="grid grid-cols-2 lg:grid-cols-3 gap-4">
         {icons.map((icon, index) => (
-          <a
+          <div
             key={index}
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
+            // href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
             className="flex justify-center items-center group rounded-lg border border-transparent border-gray-900 bg-white text-neutral-900 dark:text-neutral-100 dark:bg-neutral-900/30 dark:border-neutral-900 px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-            target="_blank"
+            // target="_blank"
             rel="noopener noreferrer"
           >
             <Image
@@ -29,7 +29,7 @@ const ProficiencySpectrum = () => {
               height={24}
               priority
             />
-          </a>
+          </div>
         ))}
       </div>
     </section>

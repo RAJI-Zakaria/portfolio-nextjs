@@ -4,7 +4,7 @@ import { AnimatedLogo, ComposedLogo } from "../_components";
 const LogoPage = () => {
   return (
     <div className="flex flex-col flex-grow h-full items-center justify-center space-y-4">
-      <h1 className="text-4xl mb-14">Brand Logo</h1>
+      <h1 className="text-4xl mt-14 mb-14">Brand Logo</h1>
       <AnimatedLogo className="w-64" />
       <div className=" text-center">
         <h1 className="text-4xl mb-5">How did i create My Logo ?</h1>

@@ -58,9 +58,11 @@ const BlurredCardButton = ({
               <ModalHeader className="flex flex-col gap-1">{title}</ModalHeader>
               <ModalBody>
                 <p dangerouslySetInnerHTML={{ __html: description }} />
-                <Link href={githubLink} aria-label="Github">
-                  <GithubIcon className="text-default-500" />
-                </Link>
+                {githubLink && (
+                  <Link href={githubLink} aria-label="Github">
+                    <GithubIcon className="text-default-500" />
+                  </Link>
+                )}
               </ModalBody>
               <ModalFooter>
                 <Button color="danger" variant="light" onPress={onClose}>
