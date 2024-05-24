@@ -11,7 +11,7 @@ export async function POST(req: NextRequest) {
     // show all req body
     const { email, message } = await req.json();
 
-    const receivers = ["zakariaraji.me@gmail.com"];
+    const receivers = ["onboarding@resend.dev", "zakariaraji.me@gmail.com"];
 
     //check before send email
 
@@ -20,7 +20,7 @@ export async function POST(req: NextRequest) {
     }
 
     const { data, error } = await resend.emails.send({
-      from: email,
+      from: receivers[0],
       to: "X <" + email + ">",
       subject: "Reaching out from Contact Form",
       react: EmailTemplate({ email, message }) as React.ReactElement,
