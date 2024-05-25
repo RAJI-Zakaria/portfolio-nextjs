@@ -11,7 +11,7 @@ export async function POST(req: NextRequest) {
     // show all req body
     const { email, message } = await req.json();
 
-    const receivers = ["onboarding@resend.dev", "zakariaraji.me@gmail.com"];
+    const receivers = ["zakaria@airakaz.fr", "zakariaraji.me@gmail.com"];
 
     //check before send email
 
