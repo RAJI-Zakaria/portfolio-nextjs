@@ -5,13 +5,17 @@ import { Resend } from "resend";
 
 const resend = new Resend(process.env.RESEND_API_KEY);
 
+//Notice : This function is going to send emails to my own email address instead of sending confirmation email to the user
 export async function POST(req: NextRequest) {
   try {
     console.log("Sending email...");
     // show all req body
     const { email, message } = await req.json();
 
-    const receivers = ["zakaria@airakaz.fr", "zakariaraji.me@gmail.com"];
+    const receivers = {
+      authorized: "zakaria@airakaz.fr",
+      personal: "zakariaraji.me@gmail.com",
+    };
 
     //check before send email
 
@@ -20,8 +24,8 @@ export async function POST(req: NextRequest) {
     }
 
     const { data, error } = await resend.emails.send({
-      from: receivers[0],
-      to: "X <" + email + ">",
+      from: receivers.authorized,
+      to: "X <" + receivers.personal + ">",
       subject: "Reaching out from Contact Form",
       react: EmailTemplate({ email, message }) as React.ReactElement,
     });
