@@ -1,10 +1,15 @@
-import { Card, CardBody, Image, Button, Slider } from "@nextui-org/react";
 import { Icons } from "@/app/_components/";
+import { Card, CardBody } from "@nextui-org/react";
 import Link from "next/link";
 import { fetchRandomQuote } from "./_hooks/quoteFetcher";
 import LikeQuote from "./LikeQuote";
-import { isLiked } from "./_hooks/quoteServerActions";
 
+import type { Metadata } from "next";
+export const metadata: Metadata = {
+  title: "Random Quotes- Zakaria RAJI",
+  description:
+    "Zakaria RAJI's Project, Random Quotes, NextJS, TailwindCSS, API fetcher",
+};
 const QuotesPage = async () => {
   const { QuoteIcon } = Icons;
 

@@ -1,6 +1,11 @@
 import React from "react";
 import { AnimatedLogo, ComposedLogo } from "../_components";
-
+import type { Metadata } from "next";
+export const metadata: Metadata = {
+  title: "Logo - ZZK - Zakaria RAJI",
+  description:
+    "Zakaria RAJI's Project, Logo : illustrator, photoshop, XD and figma",
+};
 const LogoPage = () => {
   return (
     <div className="flex flex-col flex-grow h-full items-center justify-center space-y-4">

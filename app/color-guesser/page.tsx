@@ -1,4 +1,10 @@
 import ColorGuesser from "./ColorGuesser";
+import type { Metadata } from "next";
+export const metadata: Metadata = {
+  title: "Color Guesser - Zakaria RAJI",
+  description:
+    "Zakaria RAJI's Project, Color Guesser, NextJS, TailwindCSS, Random colors",
+};
 const ColorGuesserPage = () => {
   return (
     <section

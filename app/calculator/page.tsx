@@ -1,6 +1,10 @@
-import { Code } from "@nextui-org/code";
 import Calculator from "./Calculator";
-
+import type { Metadata } from "next";
+export const metadata: Metadata = {
+  title: "Calculator - Zakaria RAJI",
+  description:
+    "Zakaria RAJI's Project, Calculator, NextJS, TailwindCSS, Random colors",
+};
 const CalculatorPage = () => {
   return (
     <div className="w-full">

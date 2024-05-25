@@ -1,6 +1,12 @@
 import React from "react";
 
 import Counter from "./Counter";
+import type { Metadata } from "next";
+export const metadata: Metadata = {
+  title: "Counter - Zakaria RAJI",
+  description:
+    "Zakaria RAJI's Project, Counter, Zustand, React, NextJS, TypeScript, TailwindCSS",
+};
 const CounterPage = () => {
   return (
     <div className="flex flex-col h-full items-center justify-center">
