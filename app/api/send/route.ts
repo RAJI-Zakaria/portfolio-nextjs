@@ -27,6 +27,7 @@ export async function POST(req: NextRequest) {
     });
 
     if (error) {
+      console.log(error);
       return Response.json({ error });
     }
     console.log("Email sent successfully!", data);
