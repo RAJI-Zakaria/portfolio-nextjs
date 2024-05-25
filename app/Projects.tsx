@@ -98,10 +98,7 @@ const Projects = () => {
 
   //
   return (
-    <section
-      id="projects"
-      className="flex flex-col text-center gap-4 my-40 px-5 pb-10 pt-20"
-    >
+    <section id="projects" className="flex flex-col text-center gap-4 my-40 ">
       <div className="space-y-3 flex flex-col justify-center">
         <h2 className="font-bold text-4xl md:text-4xl leading-normal">
           Why work with me

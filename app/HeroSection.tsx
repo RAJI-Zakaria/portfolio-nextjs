@@ -5,7 +5,7 @@ import React from "react";
 
 const HeroSection = () => {
   return (
-    <div className="my-20">
+    <div className="my-10">
       <div className="flex flex-col content-center justify-center text-center space-y-12">
         <h1 className="font-bold text-4xl md:text-5xl leading-normal">
           <span className="bg-gradient-to-r from-yellow-500 to-pink-500 bg-clip-text text-transparent">

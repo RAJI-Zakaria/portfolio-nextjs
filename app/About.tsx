@@ -2,7 +2,7 @@ import React from "react";
 
 const About = () => {
   return (
-    <section id="about" className="grid lg:grid-cols-2 gap-4 my-40">
+    <section id="about" className="grid lg:grid-cols-2 gap-4 my-24">
       <div className="space-y-3 flex flex-col justify-center">
         <h2 className="font-bold text-4xl md:text-4xl leading-normal">
           Together Towards

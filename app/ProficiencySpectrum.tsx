@@ -10,7 +10,7 @@ const ProficiencySpectrum = () => {
     "/agile.svg",
   ];
   return (
-    <section className="mx-auto sm:w-auto lg:w-551 text-center space-y-3">
+    <section className="mx-auto sm:w-auto lg:w-551 text-center space-y-3 mb-40">
       <h2 className="text-lg font-semibold uppercase">Proficiency Spectrum</h2>
       <div className="grid grid-cols-2 lg:grid-cols-3 gap-4">
         {icons.map((icon, index) => (

@@ -1,12 +1,14 @@
 "use client";
 import React, { useEffect, useState } from "react";
-import { Button } from "@nextui-org/button";
-import { Input, Textarea } from "@nextui-org/input";
+import { Button, Input, Textarea, Spinner } from "@nextui-org/react";
+import clsx from "clsx";
 
 const Contact = () => {
   const [emailInvalid, setEmailInvalid] = useState(false);
   const [email, setEmail] = useState("");
   const [message, setMessage] = useState("");
+
+  const [isSending, setIsSending] = useState(false);
   const [successMessage, setSuccessMessage] = useState("");
   const [errorMessage, setErrorMessage] = useState("");
 
@@ -27,6 +29,8 @@ const Contact = () => {
 
   async function handleSubmit(event: any) {
     event.preventDefault();
+    if (isSending) return;
+    setIsSending(true);
 
     if (!validateEmail(email)) {
       setErrorMessage("Please enter a valid email");
@@ -55,6 +59,8 @@ const Contact = () => {
     } catch (error) {
       setErrorMessage("Failed to send message, please try again.");
     }
+
+    setIsSending(false);
   }
 
   return (
@@ -111,10 +117,14 @@ const Contact = () => {
         />
         <Button
           radius="full"
-          className="bg-gradient-to-tr from-pink-500 to-yellow-500 text-white shadow-lg"
+          className={clsx("bg-gradient-to-tr  text-white shadow-lg", {
+            "opacity-50 cursor-not-allowed": isSending,
+            "from-pink-500 to-yellow-500": !isSending,
+          })}
           type="submit"
+          disabled={isSending}
         >
-          Send
+          {(isSending && <Spinner size="md" color="white" />) || "Send"}
         </Button>
       </form>
     </section>
