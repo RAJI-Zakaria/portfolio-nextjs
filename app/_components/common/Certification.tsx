@@ -80,7 +80,12 @@ const Certification = () => {
           </div>
         ))}
       </div>
-      <Modal size="3xl" isOpen={isOpen} onOpenChange={onOpenChange}>
+      <Modal
+        size="3xl"
+        isOpen={isOpen}
+        scrollBehavior="outside"
+        onOpenChange={onOpenChange}
+      >
         <ModalContent>
           {(onClose) => (
             <>
@@ -92,8 +97,8 @@ const Certification = () => {
                 <iframe
                   title={certifications[selectedItem].title}
                   src={certifications[selectedItem].url}
-                  className="w-full rounded-2xl"
-                  height="500px"
+                  className="w-full h-[300px] md:[500px] rounded-2xl"
+                  // height="500px"
                 ></iframe>
               </ModalBody>
               <ModalFooter>
