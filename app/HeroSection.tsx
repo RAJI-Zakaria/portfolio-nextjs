@@ -16,17 +16,19 @@ const HeroSection = () => {
             Zakaria RAJI
           </span>
           <br />
-          <Typewriter
-            words={["IT Engineer", "Development experts", "Full-Stack"]}
-            loop={50}
-            cursor
-            cursorStyle="_"
-            typeSpeed={70}
-            deleteSpeed={60}
-            delaySpeed={220}
-            // onLoopDone={handleDone}
-            // onType={handleType}
-          />
+          <span className="flex justify-center items-center h-[96px] md:h-20 lg:h-24 ">
+            <Typewriter
+              words={["IT Engineer", "Development experts", "Full-Stack"]}
+              loop={50}
+              cursor
+              cursorStyle="_"
+              typeSpeed={70}
+              deleteSpeed={60}
+              delaySpeed={220}
+              // onLoopDone={handleDone}
+              // onType={handleType}
+            />
+          </span>
         </h1>
 
         <p className="text-lg md:text-2xl">
