@@ -76,7 +76,7 @@ const Contact = () => {
 
       <form
         onSubmit={handleSubmit}
-        className="flex flex-col space-y-3 m-auto mt-8 mb-2 w-80 max-w-screen-lg sm:w-96"
+        className="w-full md:w-80 flex flex-col space-y-3 m-auto mt-8 mb-2  max-w-screen-lg sm:w-96"
       >
         {" "}
         {successMessage && (

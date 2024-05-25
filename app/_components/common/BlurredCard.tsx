@@ -22,7 +22,7 @@ export default function BlurredCard({
     <Card
       isFooterBlurred
       radius="lg"
-      className=" flex-shrink-0 border-none h-60 w-60 mx-auto my-3  md:m-3 hover:scale-105 transition-transform duration-300 ease-in-out"
+      className="flex-shrink-0 border-none h-[300px] w-[300px] md:h-60 md:w-60 mx-auto my-3  md:m-3 hover:scale-105 transition-transform duration-300 ease-in-out"
     >
       <Image
         alt="Woman listing to music"
@@ -32,7 +32,7 @@ export default function BlurredCard({
         // width={200}
       />
       <CardFooter className="justify-between before:bg-white/10 border-white/20 border-1 overflow-hidden py-1 absolute before:rounded-xl rounded-large bottom-1 w-[calc(100%_-_8px)] shadow-small ml-1 z-10">
-        <p className="text-tiny text-white/80">{title}</p>
+        <p className="text-tiny text-white/80 w-full text-start">{title}</p>
         <BlurredCardButton
           title={title}
           description={description || " No description"}

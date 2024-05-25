@@ -41,7 +41,7 @@ const BlurredCardButton = ({
   return (
     <>
       <Button
-        className="text-tiny text-white bg-black/20"
+        className="text-tiny text-white bg-black/20 px-8"
         variant="flat"
         color="default"
         radius="lg"

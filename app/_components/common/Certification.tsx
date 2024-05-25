@@ -41,7 +41,7 @@ const Certification = () => {
       <div className="space-y-3 flex flex-col justify-center">
         <h2 className="font-bold text-4xl md:text-4xl leading-normal">
           Certified&nbsp;
-          <span className="bg-gradient-to-r from-yellow-500 to-pink-500 bg-clip-text text-transparent">
+          <span className="bg-gradient-to-r from-yellow-500 to-pink-500 bg-clip-text text-transparent break-all">
             Proficiency
           </span>
         </h2>
@@ -54,7 +54,7 @@ const Certification = () => {
           JavaScript development and related technologies.
         </p>
       </div>
-      <div className="flex space-x-10 justify-center py-10">
+      <div className="flex  flex-col md:flex-row space-y-10 md:space-y-0 md:space-x-10 justify-center py-10">
         {certifications.map((certification, index) => (
           <div
             key={index}
