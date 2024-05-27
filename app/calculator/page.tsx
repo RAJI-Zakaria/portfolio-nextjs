@@ -34,7 +34,7 @@ const CalculatorPage = () => {
           </p>
         </div>
       </div>
-      <pre className="bg-neutral-800 p-5">
+      <pre className="bg-neutral-800 p-5 break-all whitespace-pre-wrap word-wrap-break-word rounded-lg">
         {`  //expression to be calculated
     const [expression, setExpression] = useState("");
 

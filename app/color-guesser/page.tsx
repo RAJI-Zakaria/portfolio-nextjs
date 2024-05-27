@@ -9,7 +9,7 @@ const ColorGuesserPage = () => {
   return (
     <section
       id="certifications"
-      className="flex flex-col text-center gap-4 my-40 px-5 pb-10 pt-20  xl:border bg-neutral-900 xl:border-neutral-700 rounded-2xl"
+      className="flex flex-col text-center gap-4 my-24 px-5 pb-10 pt-20  border bg-neutral-900 border-neutral-700 rounded-2xl"
     >
       <div className="space-y-3 flex flex-col justify-center">
         <h2 className="font-bold text-4xl md:text-4xl leading-normal">

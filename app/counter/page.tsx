@@ -29,7 +29,7 @@ const CounterPage = () => {
             scalable state-management solution.
           </p>
           <h2 className="text-2xl">First We need to create a store.ts</h2>
-          <pre className="bg-neutral-800 p-5 text-start">{`import { create } from "zustand";
+          <pre className="bg-neutral-800 p-5 text-start  break-all whitespace-pre-wrap word-wrap-break-word rounded-lg">{`import { create } from "zustand";
 
 type CounterStore = {
   count: number;
@@ -51,7 +51,7 @@ export const useCounterStore = create<CounterStore>((set) => ({
 `}</pre>
 
           <h2 className="text-2xl">How To use store.ts `useCounterStore`?</h2>
-          <pre className="bg-neutral-800 p-5 text-start">{`const { count, increment, decrement } = useCounterStore();
+          <pre className="bg-neutral-800 p-5 text-start  break-all whitespace-pre-wrap word-wrap-break-word rounded-lg">{`const { count, increment, decrement } = useCounterStore();
 return (
     <div className="flex gap-4 items-center min-h-64 ">
         <Button

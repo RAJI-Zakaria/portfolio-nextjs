@@ -1,8 +1,8 @@
-import fs from "fs";
+const fs = require("fs");
 import path from "path";
 
 const filePath = path.resolve("app/quotes/_utils/liked.quotes.json");
-
+console.log(filePath);
 export const readLikedQuotes = (): string[] => {
   try {
     const data = fs.readFileSync(filePath, "utf-8");

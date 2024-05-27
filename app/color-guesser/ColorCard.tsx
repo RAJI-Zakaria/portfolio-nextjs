@@ -16,7 +16,7 @@ const ColorCard = ({ fill = "white", isRegenerating = false }: PropsType) => {
   }, [fill]);
   return (
     <div
-      className="w-unit-7xl md:w-unit-9xl h-40 text-3xl font-bold leading-normal rounded-xl border flex items-center justify-center self-center"
+      className="w-full sm:w-unit-7xl md:w-unit-9xl h-40 text-3xl font-bold leading-normal rounded-xl border flex items-center justify-center self-center"
       style={{
         backgroundColor: `${fill}`,
       }}
