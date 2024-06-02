@@ -68,13 +68,13 @@ const Contact = () => {
       id="contact"
       className="flex flex-col gap-4 my-40 px-5 pb-10 pt-20  xl:border bg-neutral-900 xl:border-neutral-700 rounded-2xl"
     >
-      <div className="space-y-3 flex flex-col justify-center  text-center">
+      <div className="space-y-3 flex flex-col justify-center text-center">
         <h2 className="font-bold text-4xl md:text-4xl leading-normal">
           Get in touch
         </h2>
-        <p>
+        <p className="md:text-center text-justify">
           Feel free to reach out if you have any exciting ideas or projects
-          you&apos;d like to bring to life! <br />
+          you&apos;d like to bring to life! <br className="hidden md:block" />
           Don&apos;t hesitate to share your vision—I&apos;m here to help turn it
           into reality.
         </p>

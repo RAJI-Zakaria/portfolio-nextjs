@@ -45,12 +45,12 @@ const Certification = () => {
             Proficiency
           </span>
         </h2>
-        <p>
+        <p className="text-justify md:text-center">
           Demonstrating my commitment to professional development,
-          <br />
+          <br className="hidden md:block" />
           here are some of the certifications I&apos;ve achieved to showcase my
           expertise in full-stack
-          <br />
+          <br className="hidden md:block" />
           JavaScript development and related technologies.
         </p>
       </div>

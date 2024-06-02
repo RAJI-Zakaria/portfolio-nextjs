@@ -4,7 +4,7 @@ const About = () => {
   return (
     <section id="about" className="grid lg:grid-cols-2 gap-4 my-24">
       <div className="space-y-3 flex flex-col justify-center">
-        <h2 className="font-bold text-4xl md:text-4xl leading-normal">
+        <h2 className="font-bold text-4xl md:text-4xl leading-normal text-center">
           Together Towards
           <br />
           <span className="bg-gradient-to-r from-yellow-500 to-pink-500 bg-clip-text text-transparent">
@@ -17,8 +17,8 @@ const About = () => {
           cutting-edge IT services and software solutions to organizations.{" "}
           <br />
           With a keen interest in web/mobile design, multimedia, and digital
-          marketing strategies such as SEO and SMO, I am eager to apply my
-          skills and knowledge to drive innovation and growth. <br />
+          marketing strategies such as SEO, I am eager to apply my skills and
+          knowledge to drive innovation and growth. <br />
           <br />
           Currently seeking new opportunities in a Junior Development Lead
           position.

@@ -98,13 +98,14 @@ const Projects = () => {
 
   //
   return (
-    <section id="projects" className="flex flex-col text-center gap-4 my-40 ">
-      <div className="space-y-3 flex flex-col justify-center">
+    <section id="projects" className="flex flex-col etext-center gap-4 my-40">
+      <div className="space-y-3 flex flex-col justify-center text-justify md:text-center">
         <h2 className="font-bold text-4xl md:text-4xl leading-normal">
-          Why work with me
+          Why Collaborate with Me
         </h2>
         <p>
-          Explore a selection of projects I&apos;ve worked on. <br />
+          Explore a selection of projects I&apos;ve worked on.{" "}
+          <br className="hidden md:block" />
           Each project showcases my skills and expertise in delivering impactful
           solutions.
         </p>

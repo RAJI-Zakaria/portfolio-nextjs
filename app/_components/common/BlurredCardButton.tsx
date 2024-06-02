@@ -51,7 +51,12 @@ const BlurredCardButton = ({
         More Details
       </Button>
 
-      <Modal size="3xl" isOpen={isOpen} onOpenChange={onOpenChange}>
+      <Modal
+        size="3xl"
+        isOpen={isOpen}
+        onOpenChange={onOpenChange}
+        scrollBehavior="outside"
+      >
         <ModalContent>
           {(onClose: any) => (
             <>
