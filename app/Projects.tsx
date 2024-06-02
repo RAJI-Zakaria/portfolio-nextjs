@@ -103,12 +103,7 @@ const Projects = () => {
         <h2 className="font-bold text-4xl md:text-4xl leading-normal">
           Why Collaborate with Me
         </h2>
-        <p>
-          Explore a selection of projects I&apos;ve worked on.{" "}
-          <br className="hidden md:block" />
-          Each project showcases my skills and expertise in delivering impactful
-          solutions.
-        </p>
+        <p>Explore a selection of projects I&apos;ve worked on. </p>
       </div>
       <div className="flex flex-wrap flex-col md:flex-row justify-center ">
         {projects.map((project, index) => (
