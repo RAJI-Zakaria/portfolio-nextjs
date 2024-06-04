@@ -10,7 +10,7 @@ export const metadata: Metadata = {
   description:
     "Zakaria RAJI's Project, Random Quotes, NextJS, TailwindCSS, API fetcher",
 };
-export const dynamic = "force-dynamic";
+// export const dynamic = "force-dynamic";
 const QuotesPage = async () => {
   const { QuoteIcon } = Icons;
 
