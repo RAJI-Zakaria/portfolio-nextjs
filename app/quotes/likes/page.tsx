@@ -1,6 +1,7 @@
 import { QuoteType } from "@/types/quote";
 import { readLikedQuotes } from "../_utils/fileQuotes";
 import { fetchQuoteById } from "../_hooks/quoteFetcher";
+export const dynamic = "force-dynamic";
 
 const QuotesLikesPage = async () => {
   const quotesIds = readLikedQuotes();

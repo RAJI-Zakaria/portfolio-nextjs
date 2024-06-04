@@ -89,11 +89,13 @@ const Certification = () => {
         <ModalContent>
           {(onClose) => (
             <>
-              <ModalHeader className="flex flex-col gap-1">
+              <ModalHeader className="flex flex-col gap-1 text-white">
                 {certifications[selectedItem].title}
               </ModalHeader>
               <ModalBody>
-                <p>{certifications[selectedItem].description}</p>
+                <p className=" text-white">
+                  {certifications[selectedItem].description}
+                </p>
                 <iframe
                   title={certifications[selectedItem].title}
                   src={certifications[selectedItem].url}
