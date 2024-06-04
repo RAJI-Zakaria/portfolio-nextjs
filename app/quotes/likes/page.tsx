@@ -1,6 +1,7 @@
 import { QuoteType } from "@/types/quote";
 import { readLikedQuotes } from "../_utils/fileQuotes";
 import { fetchQuoteById } from "../_hooks/quoteFetcher";
+import toast from "react-hot-toast";
 export const dynamic = "force-dynamic";
 
 const QuotesLikesPage = async () => {
@@ -8,9 +9,13 @@ const QuotesLikesPage = async () => {
   console.log(quotesIds);
   //fetch quotes using fetchQuoteById
   let quotes = [];
-  for (const quoteId of quotesIds) {
-    const quote = await fetchQuoteById(quoteId);
-    quotes.push(quote);
+  try {
+    for (const quoteId of quotesIds) {
+      const quote = await fetchQuoteById(quoteId);
+      quotes.push(quote);
+    }
+  } catch (e) {
+    toast.error("Error fetching liked quotes");
   }
 
   return (
