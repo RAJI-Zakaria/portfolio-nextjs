@@ -34,6 +34,33 @@ const Projects = () => {
       isPopover: true,
     },
     {
+      title: "Walmart Clone",
+      description: `<h3>Introduction</h3>
+        <p>What a great technology Next.js is! It introduces numerous methods to code in a clean and structured manner.</p>
+        <p>🎉 Just wrapped up developing a mini Walmart clone 💪 using Next.js & DummyJSON API.</p>
+        <p>I delved into Intercepting & Parallel routes 😮 as well as making use of tools, like Shadcn and Zustand to improve efficiency.</p>
+        <p>Indeed it was mind blowing 🤯.</p>
+        <br />
+        <h2>Core :</h2>
+        <ul className="list-disc bg-red-800">
+            <li> - Fetching API</li>
+            <li> - Listing Product - Respecting Types (typescript)</li>
+            <li> - Implementing Parallel Routes & Interceptors</li>
+        </ul><br />
+        <p>Special Thanks to Sonny Sangha (PapaReact) for the beautiful tutorial & tips.</p>
+        <p>It's a pity Oxylabs web scraper doesn't provide free trial for more than 1 week as a result I used DummyJSON to fetch fake products instead! </p>
+        <br />
+        <h2>Deployment</h2>
+        <p><a href="https://walmart-clone-airakaz.vercel.app/">https://walmart-clone-airakaz.vercel.app/</a></p>
+        <iframe  style="width:100%; min-height:350px; border-radius:24px"  src="https://www.youtube.com/embed/7OvM_VE36GA" title="WALMART   AIRAKAZ FR   Zakaria RAJI" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+    `,
+      githubLink: "",
+      imagePath: "/thumbnails/thumbnail-walmart.png",
+
+      isPopover: true,
+    },
+    {
       title: "GuitART - Customize your Guitar",
       description: `<h3>Introduction :</h3>
 
