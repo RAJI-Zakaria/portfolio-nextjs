@@ -37,4 +37,5 @@ yarn-error.log*
 *.tsbuildinfo
 next-env.d.ts
 
-/app/quotes/_utils/liked.quotes.json
+liked.quotes.json
+app/quotes/_utils/liked.quotes.json

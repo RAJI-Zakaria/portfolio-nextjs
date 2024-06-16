@@ -57,7 +57,7 @@ const Projects = () => {
     `,
       githubLink: "",
       imagePath: "/thumbnails/thumbnail-walmart.png",
-
+      link: "/project1",
       isPopover: true,
     },
     {

@@ -2,7 +2,14 @@ const fs = require("fs");
 import path from "path";
 
 const filePath = path.resolve("app/quotes/_utils/liked.quotes.json");
-console.log(filePath);
+// Check if the file exists
+if (!fs.existsSync(filePath)) {
+  // Create the file with an empty array inside
+  fs.writeFileSync(filePath, JSON.stringify([], null, 2));
+  console.log("File created with empty array inside.");
+} else {
+  console.log("File already exists.");
+}
 export const readLikedQuotes = (): string[] => {
   try {
     const data = fs.readFileSync(filePath, "utf-8");
