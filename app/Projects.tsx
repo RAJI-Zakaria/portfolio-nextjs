@@ -61,6 +61,41 @@ const Projects = () => {
       isPopover: true,
     },
     {
+      title: "Spotify Clone",
+      description: `<h3>Introduction</h3>
+        <p>React JS: Simplicity is the key to its popularity.</p>
+         <br />
+         <a href="https://github.com/RAJI-Zakaria/spotify-clone-react-js" >https://github.com/RAJI-Zakaria/spotify-clone-react-js</a>
+        <br />
+         <br />
+        <p>🎉 Here is the first version of my Spotify clone 💪 using React.js & Spotify API.</p>
+        <p>The app is still under construction, but here are the technologies that i used : </p>
+        <ul>
+       <li> - React JS 18</li>
+<li> - Spotify API</li>
+<li> - React Context (reducer, dispatcher) VS Prop Drilling</li>
+<li> - Custom CSS</li>
+<li> - TailwindCSS</li>
+        </ul>
+        <br />
+        <img  style="width:100%; border-radius:24px"  src="/spotify/spotify-dev.png" />
+        <br />
+        <p>All playlist items are fetched dynamically from the connected user's Spotify account.</p>
+
+        <br />
+        <h2>Prop Drilling --> Coupled Code</h2>
+
+        <p>Avoiding passing data between components using props is mandatory. Using the Context API, Redux, or any state management library will save us a lot of trouble dealing with data flow throughout the entire app.</p>
+
+        <br />
+         <a href="https://github.com/RAJI-Zakaria/spotify-clone-react-js" >https://github.com/RAJI-Zakaria/spotify-clone-react-js</a>
+    `,
+      githubLink: "",
+      imagePath: "/thumbnails/thumbnail-spotify.png",
+      link: "/project1",
+      isPopover: true,
+    },
+    {
       title: "GuitART - Customize your Guitar",
       description: `<h3>Introduction :</h3>
 
