@@ -19,7 +19,7 @@ const SecureKeyGenCard = () => {
   const [password, setPassword] = useState<string>("KLJHKa#@(*#@");
 
   return (
-    <Card className="py-10 min-w-[600px] space-y-10">
+    <Card className="py-10 px-3 md:px-0 w-full md:w-[600px] space-y-10">
       <CardHeader className="pb-0 pt-2 px-4 flex-col space-y-4">
         <Image src="/password.gif" height={100} width={100} alt="password" />
         <h1 className="text-2xl font-bold text-default-900 ">
@@ -27,7 +27,7 @@ const SecureKeyGenCard = () => {
         </h1>
 
         <h3
-          className="text-2xl font-bold text-default-900 cursor-pointer"
+          className="text-2xl font-bold  cursor-pointer bg-gradient-to-r from-yellow-500 to-pink-500 bg-clip-text text-transparent"
           onClick={() => {
             navigator.clipboard.writeText(password);
             toast.success("Password copied to clipboard");
@@ -36,14 +36,14 @@ const SecureKeyGenCard = () => {
           {password}
         </h3>
       </CardHeader>
-      <CardBody className="overflow-visible py-2 px-0 md:px-24 ">
+      <CardBody className="overflow-visible py-2  px-5 md:p-0 md:px-24 ">
         <Slider
           size="md"
           step={1}
           color="foreground"
           label="Password Length"
           showSteps={true}
-          maxValue={16}
+          maxValue={24}
           minValue={6}
           defaultValue={8}
           className="w-full"

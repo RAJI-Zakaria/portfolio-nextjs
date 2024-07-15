@@ -149,6 +149,13 @@ const Projects = () => {
       isPopover: false,
     },
     {
+      title: "Secure KeyGen",
+      link: "/secure-keygen",
+      imagePath: "/thumbnails/thumbnail-secure-keygen.png",
+      githubLink: "",
+      isPopover: false,
+    },
+    {
       title: "More Projects",
       link: "https://github.com/RAJI-Zakaria",
       isLinkBlank: true,
