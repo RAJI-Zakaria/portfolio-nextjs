@@ -6,7 +6,7 @@ export const projects = [
             <br />
             <h2>Here is what i've used so far :</h2>
             <ul className="list-disc bg-red-800">
-                <li> - Next js for creating beautiful UI and server action as well as api routes for clerk</li>
+                <li> - Next js for creating beautiful UI and api routes for clerk</li>
                 <li> - Shadcn for beautiful, interactive and accessible UI components</li>
                 <li> - Clerk to manage authentication and user sessions</li>
                 <li> - MongoDB for data persistance</li>
@@ -25,11 +25,11 @@ export const projects = [
             <h2>Code</h2>
             <p><a href="https://github.com/RAJI-Zakaria/ai-image-tool/">https://github.com/RAJI-Zakaria/ai-image-tool/</a></p>
                   <br />
-            <img style="width:100%; border-radius:24px"   src="/ai-image-tools/dashboard.png" /> <br />
+            <img alt="image ai tools airakaz dashboard" style="width:100%; border-radius:24px"   src="/ai-image-tools/dashboard.png" /> <br />
             <hr/> <br />
-            <img style="width:100%; border-radius:24px"   src="/ai-image-tools/background-remove.png" /> <br />
+            <img alt="image ai tools airakaz background remove" style="width:100%; border-radius:24px"   src="/ai-image-tools/background-remove.png" /> <br />
             <hr/> <br />
-            <img style="width:100%; border-radius:24px"   src="/ai-image-tools/restore-image.png" />
+            <img alt="image ai tools airakaz restore image" style="width:100%; border-radius:24px"   src="/ai-image-tools/restore-image.png" />
         `,
     githubLink: "",
     imagePath: "/thumbnails/thumbnail-ai-image-tools.png",
