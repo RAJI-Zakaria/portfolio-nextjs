@@ -5,8 +5,8 @@ import { projects } from "@/data/projects";
 const Projects = () => {
   //
   return (
-    <section id="projects" className="flex flex-col etext-center gap-4 my-40">
-      <div className="space-y-3 flex flex-col justify-center text-justify md:text-center">
+    <section id="projects" className="flex flex-col gap-4 my-40">
+      <div className="space-y-3 flex flex-col text-center">
         <h2 className="font-bold text-4xl md:text-4xl leading-normal">
           Why Collaborate with Me
         </h2>
