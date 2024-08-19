@@ -62,9 +62,19 @@ const HangmanGame = () => {
 
   return (
     <div className="flex max-w-[800px] flex-col gap-4 m-auto items-center">
-      <div className="">HangmanGame</div>
       {isWinner && "Winner! - Refresh to try again"}
       {isLoser && "Nice Try - Refresh to try again"}
+      {isWinner || isLoser ? (
+        <button
+          onClick={() => {
+            setGuessedLetters([]);
+            setWordToGuess(words[Math.floor(Math.random() * words.length)]);
+          }}
+          className="bg-white text-black px-4 py-2 rounded-lg"
+        >
+          New Game - Press Enter
+        </button>
+      ) : null}
       <HangmanDrawing numberOfGuesses={incorrectLetters.length} />
       <HangmanWord guessedLetters={guessedLetters} wordToGuess={wordToGuess} />
       <HangmanKeyboard
