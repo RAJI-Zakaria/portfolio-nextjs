@@ -1,10 +1,13 @@
 "use client";
 import React, { useCallback, useEffect, useState } from "react";
-import { words } from "./data.json";
+import wordsData from "./data.json";
 import HangmanDrawing from "./HangmanDrawing";
 import HangmanKeyboard from "./HangmanKeyboard";
 import HangmanWord from "./HangmanWord";
 import toast from "react-hot-toast";
+import Confetti from "react-confetti";
+
+const words: string[] = wordsData.words;
 
 const HangmanGame = () => {
   const [wordToGuess, setWordToGuess] = useState(
@@ -62,6 +65,7 @@ const HangmanGame = () => {
 
   return (
     <div className="flex max-w-[800px] flex-col gap-4 m-auto items-center">
+      {isWinner && <Confetti />}
       {isWinner && "Winner! - Refresh to try again"}
       {isLoser && "Nice Try - Refresh to try again"}
       {isWinner || isLoser ? (
