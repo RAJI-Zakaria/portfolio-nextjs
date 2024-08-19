@@ -23,8 +23,8 @@ const HangmanKeyboard = ({
           <button
             key={letter}
             onClick={() => addGuessedLetter(letter)}
-            disabled={isInactive || isActive}
-            className={`btn hover:bg-neutral-600 active:bg-neutral-600 pointer transition-all ease-soft-spring w-10 h-10 border border-black rounded-lg flex items-center justify-center  ${
+            disabled={isInactive || isActive || disabled}
+            className={`hover:bg-neutral-600 active:bg-neutral-600 pointer transition-all ease-soft-spring w-10 h-10 border border-black rounded-lg flex items-center justify-center  ${
               styles.btn
             } ${isActive ? styles.active : ""} ${
               isInactive ? styles.inactive : ""
