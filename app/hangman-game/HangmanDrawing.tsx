@@ -38,7 +38,7 @@ type HangmanDrawingProps = {
 };
 const HangmanDrawing = ({ numberOfGuesses }: { numberOfGuesses: number }) => {
   return (
-    <div className="relative">
+    <div className="relative scale-50 lg:scale-100">
       {BODY_PARTS.slice(0, numberOfGuesses).map((BodyPart, index) => (
         <BodyPart key={index} />
       ))}
