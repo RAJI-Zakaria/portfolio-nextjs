@@ -188,6 +188,13 @@ export const projects = [
     isPopover: false,
   },
   {
+    title: "Hangman Game",
+    link: "/hangman-game",
+    imagePath: "/thumbnails/thumbnail-hangman.jpg",
+    githubLink: "",
+    isPopover: false,
+  },
+  {
     title: "More Projects",
     link: "https://github.com/RAJI-Zakaria",
     isLinkBlank: true,
