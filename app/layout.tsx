@@ -8,7 +8,7 @@ import ThemeProvider from "./providers";
 import { siteConfig } from "@/config/site";
 import { Metadata } from "next";
 import Link from "next/link";
-import { NavBar, StarField } from "./_components";
+import { Construction, NavBar, StarField } from "./_components";
 
 import { Toaster } from "react-hot-toast";
 
@@ -24,12 +24,17 @@ export const metadata: Metadata = {
     apple: "/apple-touch-icon.png",
   },
 };
+import { headers } from "next/headers";
+import { permanentRedirect } from "next/navigation";
 
 export default function RootLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  // redirect to maintenance page
+  return <Construction />;
+
   return (
     <html className="dark" lang="en" style={{ colorScheme: "dark" }}>
       <body className={inter.className}>

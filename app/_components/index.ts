@@ -10,3 +10,5 @@ export { default as FeatureCard } from "./common/FeatureCard";
 export { default as Contact } from "./common/Contact";
 export { default as EmailTemplate } from "./common/EmailTemplate";
 export { default as Certification } from "./common/Certification";
+
+export { default as Construction } from "./common/Construction";
