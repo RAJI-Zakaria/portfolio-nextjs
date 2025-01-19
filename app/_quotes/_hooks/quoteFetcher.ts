@@ -1,4 +1,4 @@
-//create a hook to fetch quotes here is the base url https://api.quotable.io/ using axios
+// Create a hook to fetch quotes here is the base url https://api.quotable.io/ using axios
 // great method like fetchRandomQuote, fetchQuoteById
 
 import axios from "axios";
