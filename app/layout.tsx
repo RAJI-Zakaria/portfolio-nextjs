@@ -33,7 +33,11 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   // redirect to maintenance page
-  return <Construction />;
+  return (
+    <html className="dark" lang="en" style={{ colorScheme: "dark" }}>
+      <Construction />{" "}
+    </html>
+  );
 
   return (
     <html className="dark" lang="en" style={{ colorScheme: "dark" }}>
