@@ -5,7 +5,7 @@ import LogoAnimation from "./Logo/Animated";
 import HangmanGame from "@/app/hangman-game/HangmanGame";
 
 const ConstructionPage = () => {
-  const [opened, setOpened] = useState(true);
+  const [opened, setOpened] = useState(false);
 
   const openGame = () => {
     setOpened(true);
