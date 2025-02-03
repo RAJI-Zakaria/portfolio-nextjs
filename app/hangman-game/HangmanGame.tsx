@@ -28,6 +28,7 @@ const HangmanGame = () => {
     getRandomWord(words[`difficulty_${difficulty}`], difficulty)
   );
   const [guessedLetters, setGuessedLetters] = useState<string[]>([]);
+  const [counter, setCounter] = useState(0);
 
   const incorrectLetters = guessedLetters.filter(
     (letter) => !wordToGuess.includes(letter)
@@ -48,51 +49,58 @@ const HangmanGame = () => {
     }
   }, [isLoser, isWinner, wordToGuess]);
 
+  const revealRandomLetter = useCallback(() => {
+    const remainingLetters = wordToGuess
+      .split("")
+      .filter((letter) => !guessedLetters.includes(letter));
+
+    if (remainingLetters.length > 0) {
+      const randomLetter =
+        remainingLetters[Math.floor(Math.random() * remainingLetters.length)];
+      setGuessedLetters((currentLetters) => [...currentLetters, randomLetter]);
+    }
+  }, [guessedLetters, wordToGuess]);
+
   const addGuessedLetter = useCallback(
     (letter: string) => {
-      if (guessedLetters.includes(letter) || isLoser || isWinner) {
-        if (letter == "help")
-          toast.success(
-            "Yeah, go ahead, select this option again... I dare you. 😂",
-            {
-              style: {
-                background: "#333",
-                color: "#fff",
-              },
-              icon: "🤣",
-              position: "top-center",
-            }
-          );
+      if (guessedLetters.includes(letter) || isLoser || isWinner) return;
+
+      if (letter === "help") {
+        setCounter((prevCounter) => {
+          const newCounter = prevCounter + 1;
+          if (newCounter > 1) {
+            toast.success(
+              "Didn't your mama tell you cheating is bad? I mean, ask for help again, and I’m gonna *aid* you! 😂",
+              {
+                style: { background: "#333", color: "#fff" },
+                icon: "🎭",
+                position: "top-center",
+              }
+            );
+            revealRandomLetter();
+          } else {
+            toast.success(
+              "Yeah, go ahead, select this option again... I dare you. 🤣",
+              {
+                style: { background: "#333", color: "#fff" },
+                icon: "🤣",
+                position: "top-center",
+              }
+            );
+          }
+          return newCounter;
+        });
         return;
       }
 
       setGuessedLetters((currentLetters) => [...currentLetters, letter]);
-      switch (
-        letter // only for special buttons
-      ) {
-        case "help":
-          //guess one of the remaining letters
-          const remainingLetters = wordToGuess
-            .split("")
-            .filter((letter) => !guessedLetters.includes(letter));
-          const randomLetter =
-            remainingLetters[
-              Math.floor(Math.random() * remainingLetters.length)
-            ];
-          addGuessedLetter(randomLetter);
-
-          break;
-
-        default:
-          break;
-      }
     },
-    [guessedLetters, isWinner, isLoser]
+    [guessedLetters, isWinner, isLoser, revealRandomLetter]
   );
 
   useEffect(() => {
     const handler = (e: KeyboardEvent) => {
-      const key = e.key;
+      const key = e.key.toLowerCase();
       if (key.match(/^[a-z]$/)) {
         e.preventDefault();
         addGuessedLetter(key);
@@ -102,11 +110,11 @@ const HangmanGame = () => {
         setWordToGuess(
           getRandomWord(words[`difficulty_${difficulty}`], difficulty)
         );
+        setCounter(0);
       }
     };
 
     document.addEventListener("keypress", handler);
-
     return () => {
       document.removeEventListener("keypress", handler);
     };
@@ -124,6 +132,7 @@ const HangmanGame = () => {
             setWordToGuess(
               getRandomWord(words[`difficulty_${difficulty}`], difficulty)
             );
+            setCounter(0);
           }}
           className="bg-white text-black px-4 py-2 rounded-lg"
         >
@@ -134,7 +143,7 @@ const HangmanGame = () => {
       <HangmanDrawing numberOfGuesses={incorrectLetters.length} />
 
       {/* Difficulty Slider */}
-      <div className="  w-full max-w-xs sm:max-w-sm md:max-w-md lg:max-w-lg">
+      <div className="w-full max-w-xs sm:max-w-sm md:max-w-md lg:max-w-lg">
         <Slider
           size="md"
           step={1}
@@ -152,6 +161,7 @@ const HangmanGame = () => {
               getRandomWord(words[`difficulty_${length}`], length)
             );
             setGuessedLetters([]);
+            setCounter(0);
           }}
         />
       </div>
