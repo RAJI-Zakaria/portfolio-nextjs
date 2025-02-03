@@ -70,7 +70,7 @@ const HangmanGame = () => {
           const newCounter = prevCounter + 1;
           if (newCounter > 1) {
             toast.success(
-              "Didn't your mama tell you cheating is bad? I mean, ask for help again, and I’m gonna *aid* you! 😂",
+              "Oh wow, you're really milking this help button, huh? Fine, have a letter! 😂",
               {
                 style: { background: "#333", color: "#fff" },
                 icon: "🎭",
@@ -80,7 +80,7 @@ const HangmanGame = () => {
             revealRandomLetter();
           } else {
             toast.success(
-              "Yeah, go ahead, select this option again... I dare you. 🤣",
+              "Didn't your mama tell you cheating is bad? I mean, ask for help again, and I’m gonna *aid* you! 😂",
               {
                 style: { background: "#333", color: "#fff" },
                 icon: "🤣",
