@@ -52,14 +52,17 @@ const HangmanGame = () => {
     (letter: string) => {
       if (guessedLetters.includes(letter) || isLoser || isWinner) {
         if (letter == "help")
-          toast.success("No way you are gonna use this option again :)", {
-            style: {
-              background: "#333",
-              color: "#fff",
-            },
-            icon: "🤣",
-            position: "top-center",
-          });
+          toast.success(
+            "Yeah, go ahead, select this option again... I dare you. 😂",
+            {
+              style: {
+                background: "#333",
+                color: "#fff",
+              },
+              icon: "🤣",
+              position: "top-center",
+            }
+          );
         return;
       }
 
