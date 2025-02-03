@@ -35,6 +35,15 @@ export default function RootLayout({
   // redirect to maintenance page
   return (
     <html className="dark" lang="en" style={{ colorScheme: "dark" }}>
+      <Toaster
+        position="bottom-right"
+        toastOptions={{
+          style: {
+            background: "#333",
+            color: "#fff",
+          },
+        }}
+      />
       <Construction />{" "}
     </html>
   );

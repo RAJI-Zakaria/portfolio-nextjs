@@ -37,6 +37,8 @@ export const projects = [
     isPopover: true,
   },
   {
+    // Next.js, React, JavaScript, TypeScript, Shadcn, Clerk, MongoDB, Server Actions, API Routes, Authentication, UI/UX Design, SaaS Development, AI Image Processing, Image Manipulation, Generative AI, Web Development, Frontend Development, Backend Development, Full-Stack Development, Vercel Deployment, Git, GitHub
+
     title: "Issue Tracker",
     description: `<h3>Introduction</h3>
             <p>Embarking on a new journey with Next.js to create an issue tracker. Here is a list of the features that I will develop:</p>
